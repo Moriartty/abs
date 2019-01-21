@@ -57,29 +57,11 @@
                 <span class="comments">// After a please sound of accept, we will live happily ever after.</span><br />
                 u.accept(i);<br />
                 i.liveHappilyWith(u);<br />
-<!-- <script type="text/javascript"><!--
-google_ad_client = "ca-pub-3712320065678109";
-/* lovead */
-google_ad_slot = "0650322805";
-google_ad_width = 320;
-google_ad_height = 50;
-
-</script> -->
             </div>
             <div id="loveHeart">
                 <canvas id="garden"></canvas>
                 <div id="words">
                     <div id="messages">
-<center>
-<!-- <script type="text/javascript"><!--
-google_ad_client = "ca-pub-3712320065678109";
-/* lovead */
-google_ad_slot = "0650322805";
-google_ad_width = 320;
-google_ad_height = 50;
-
-</script> -->
-</center>
                         girlname, I will have fallen in love with you for
                         <div id="elapseClock" style="display:none"></div>
                         <a href='#' id="accept">click me if accept me</a>
@@ -92,6 +74,34 @@ google_ad_height = 50;
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        var evt = "onorientationchange" in window ? "orientationchange" : "resize";
+      
+        window.addEventListener(evt, function() {
+            console.log(evt);
+            var width = document.documentElement.clientWidth;
+             var height =  document.documentElement.clientHeight;
+              $print =  $('#print');
+             if( width > height ){
+               
+                $print.width(width);
+                $print.height(height);
+                $print.css('top',  0 );
+                $print.css('left',  0 );
+                $print.css('transform' , 'none');
+                $print.css('transform-origin' , '50% 50%');
+             }
+             else{
+                $print.width(height);
+                $print.height(width);
+                $print.css('top',  (height-width)/2 );
+                $print.css('left',  0-(height-width)/2 );
+                $print.css('transform' , 'rotate(90deg)');
+                $print.css('transform-origin' , '50% 50%');
+             }
+            
+        }, false);
+    </script>
     <script type="text/javascript">
         var offsetX = $("#loveHeart").width() / 2;
         var offsetY = $("#loveHeart").height() / 2 - 55;
